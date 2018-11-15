@@ -8,13 +8,11 @@
 ```
 
 * less语法
-http://www.bootcss.com/p/lesscss/
-
+  http://www.bootcss.com/p/lesscss/
 * bootstarp下载
-http://getbootstrap.com/
-
+  http://getbootstrap.com/
 * scss和css的区别
-https://www.jianshu.com/p/fa379a309c8a
-
+  https://www.jianshu.com/p/fa379a309c8a
 * 开源JS库
-https://cdnjs.com/
+  https://cdnjs.com/
+
