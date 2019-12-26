@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="./js/react.development.js"></script>
+    <script src="./js/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="./js/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+    /***
+     * 第一种
+     * React.createElement(
+     * type,
+     * [props],
+     * [...children]
+     * )
+     */
+    const Button = React.createElement('button', { onClick: () => alert('点击了按钮') }, '请点击按钮');
+    ReactDOM.render(Button, document.getElementById('root'));
+
+    /**
+     * 第二种
+     * @type {((tagName: string) => ActiveX.IXMLDOMElement) | (<K extends keyof HTMLElementTagNameMap>(tagName: K, options?: ElementCreationOptions) => HTMLElementTagNameMap[K]) | ((tagName: string, options?: ElementCreationOptions) => HTMLElement)}
+     */
+    // const e = React.createElement;
+    //
+    // ReactDOM.render(
+    //     e('button', { onClick: () => alert('点击了按钮') }, '点击按钮'),
+    //     document.getElementById('root')
+    // );
+
+    /**
+     * 第三种
+     */
+    // const h1 = <h1>Hello, world!</h1>;
+    // ReactDOM.render(
+    //     <h1>Hello, world!</h1>,
+    //     document.getElementById('root')
+    // );
+
+    /**
+     * 第四种
+     * 函数
+     */
+    /*function App(props) {
+        return <div {...props}>挂在到root的页面</div>
+    }
+    ReactDOM.render(<App style={{ color: 'red' }} />, document.getElementById('root'));*/
+
+    /**
+     * 第五种
+     * 类
+     */
+    /*class App extends React.Component {
+        render() {
+            // 属性都放在了类中的props属性
+            const { ...rest } = this.props;
+            return (
+                <div {...rest}>挂载到root页面的内容，实现方式是类</div>
+            );
+        }
+    }
+    ReactDOM.render(<App style={{ color: 'green' }} />, document.getElementById('root'));*/
+
+</script>
+</body>
+</html>
